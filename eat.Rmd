@@ -51,6 +51,7 @@ barchartGC(~race + eatout,data=mydata)
 barchartGC(~race + eatout,data=mydata, type="percent")
 
 ```
+It appears that white people eat out significantly more then the other races. Black people and other eat out similarlty.
 
 ## Numerical summary
 
@@ -59,7 +60,7 @@ table1 <- xtabs(~race + eatout,data=mydata)
 rowPerc(table1)
 colPerc(table1)
 ```
-This table shows that white people love mcdonanlds.
+This table shows that white people eat out more by about 15%.
 
 ## Inferential
 
@@ -68,7 +69,7 @@ chisq.test(table1)
 chisqtestGC(table1)
 fisher.test(table1)
 ```
-The p val is less then 0.05 therefore we fail to reject.
+The p val is less then 0.05 therefore we fail to reject the null hypothisis. This test shows that significantly more white people tend to consume fast fod then black people and other races. the P value is 4.633e-06 whitch is much smaller then 0.05.
 
 
 Chi-squared  test shows that 
@@ -78,4 +79,4 @@ fisherXY(mydata$race,mydata$eatout)
 ```
 
 
-Both tests have a p value of less then 0.05 and therefore we fail to reject the null hypothisis.White people are more likely to eat out then back people or other.
+Both tests have a p value of less then 0.05 and therefore we fail to reject the null hypothisis.White people are more likely to eat out then back people or other. The otiginal question was"statistical difference between at least two races with the frequency of eating out " and the answer is yes. This is backed up by our data. 
